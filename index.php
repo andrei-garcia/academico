@@ -1,10 +1,10 @@
 <?php 
 session_start();
 
- if(!isset($_SESSION['nomeUsuario']) || isset($_SESSION['sair'])){
- 	session_destroy();
- 	header("Location: login/login.php");
- }
+if(!isset($_SESSION['nomeUsuario']) || isset($_SESSION['sair'])){
+	session_destroy();
+	header("Location: login/login.php");
+}
  
 ?>
 
@@ -109,6 +109,11 @@ session_start();
 
 		 <script type="text/javascript">
 	    	$(document).ready(function(){
+	    		<?php if(isset($_SESSION['buscarTurma'])): ?>
+	    			$.get( "turmas/2016.1.php", function( data ) {
+	  					$( ".main" ).html( data );
+					});
+	    		<?php endif ?>
 				 var altura_tela = $(window).height();
 				 $(".divMenu").height(altura_tela-118);
 				 $(".main").height(altura_tela-118);

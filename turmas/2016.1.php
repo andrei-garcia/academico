@@ -70,7 +70,9 @@ try {
 									  </div>
 									  <div class="form-group">
 									    <label for="n2">N2</label>
-									    <input type="text" class="form-control" id="n2" name="n2" value=<?= $row->n2 ?>
+									    <input type="text" class="form-control" id="n2" name="n2" value=<?= $row->n2 ?>>
+									 </div>
+									<div class="form-group">   
 									    <label for="n3">N3</label>
 									    <input type="text" class="form-control" id="n3" name="n3" value=<?= $row->n3 ?>>
 									  </div>
